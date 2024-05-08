@@ -56,12 +56,16 @@ class Snake():
         elif self.x > swidth:
             self.x = 0
             self.direction = 0
+
         if mekla.x == self.x and mekla.y == self.y:    
             mekla.reset(screen.get_width(),screen.get_height())
             self.score += 10
         else:
             self.body.pop()
-        
+
+        for b in self.body[1:]:
+            if b[0] == self.x and b[1] == self.y:
+                pygame.quit()        
 
 class Mekla():
     def __init__(self,screen,swidth,sheight) -> None:
