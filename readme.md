@@ -1,7 +1,7 @@
-Snake game
+#Snake game
 
 
 todo :
-    - add gameover scenario
+    - ~~add gameover scenario~~
     - add difficulty choice
     - various
